@@ -162,6 +162,8 @@ PostgreSQL по `tstzrange(starts_at, ends_at)` для одного мастер
 
 - Задачи — **GitHub Issues + GitHub Projects** (доска: Backlog → Ready → In Progress → Review → Done).
 - Каждая задача — отдельная ветка → **Pull Request** → ревью Claude → merge.
+- Имена веток: `<тип>/<номер-issue>-<кратко-латиницей>`, например `feat/12-health-endpoint`.
+  Типы те же, что в коммитах: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `ci`. Только строчные буквы и дефисы.
 - Архитектурные решения — **ADR** в `docs/adr/NNNN-title.md` (контекст, решение, альтернативы, последствия).
 - План и roadmap — в `docs/`.
 

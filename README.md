@@ -1,1 +1,3 @@
-# massage_cabinet_react
+Сайт массажного кабинета
+Стек rails + react
+Запуск скоро
