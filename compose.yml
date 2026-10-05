@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:18           # версия как на проде; меняем только осознанно
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres  # только для разработки, на проде будет секрет
+    ports:
+      - "5433:5432"              # снаружи 5433, чтобы не конфликтовать с системным Postgres на 5432
+    volumes:
+      - pg_data:/var/lib/postgresql   # данные живут в volume и не пропадают при перезапуске
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 5
+
+volumes:
+  pg_data:
