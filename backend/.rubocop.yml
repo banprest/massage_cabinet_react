@@ -3,3 +3,6 @@ inherit_gem:
 
 plugins:
   - rubocop-rspec
+
+AllCops:
+  NewCops: enable
