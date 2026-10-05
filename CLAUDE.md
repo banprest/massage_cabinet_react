@@ -107,7 +107,7 @@
 **Архитектура:** отдельный **Rails API** + отдельный **React SPA** (ближе к рынку), монорепозиторий.
 
 ### Backend (`backend/`)
-- Ruby 3.4+, **Rails 8 в режиме API** (`--api`), **PostgreSQL**
+- Ruby 4+, **Rails 8 в режиме API** (`--api`), **PostgreSQL**
 - Аутентификация: сессии на cookie (HttpOnly, SameSite) на том же домене, что и SPA —
   безопаснее JWT в localStorage. Решение зафиксировать в ADR.
 - Авторизация: Pundit
