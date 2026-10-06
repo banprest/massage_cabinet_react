@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  mount Rswag::Ui::Engine => '/api-docs'
-  mount Rswag::Api::Engine => '/api-docs'
+  mount Rswag::Ui::Engine => "/api-docs" if Rails.env.development?
+  mount Rswag::Api::Engine => "/api-docs" if Rails.env.development?
+
   namespace :api do
-    get "v1/health"
+    namespace :v1 do
+      resource :health, only: :show, controller: "health"
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
