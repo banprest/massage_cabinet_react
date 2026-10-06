@@ -1,7 +1,7 @@
 class Api::V1::HealthController < Api::V1Controller
   def show
-    state_app = database_available? ? :ok : :error
-    render json: { status: state_app, db: state_app, version: Rails.application.config.x.app_version }, status: database_available? ? :ok : :service_unavailable
+    state_app, status_code = database_available? ? %i[ok ok] : %i[error service_unavailable]
+    render json: { status: state_app, db: state_app, version: Rails.application.config.x.app_version }, status: status_code
   end
 
   private

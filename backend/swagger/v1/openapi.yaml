@@ -15,34 +15,33 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                  db:
-                    type: string
-                  version:
-                    type: string
-                required:
-                - status
-                - db
-                - version
+                "$ref": "#/components/schemas/Health"
         '503':
           description: БД недоступна
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                  db:
-                    type: string
-                  version:
-                    type: string
-                required:
-                - status
-                - db
-                - version
+                "$ref": "#/components/schemas/Health"
+components:
+  schemas:
+    Health:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - ok
+          - error
+        db:
+          type: string
+          enum:
+          - ok
+          - error
+        version:
+          type: string
+      required:
+      - status
+      - db
+      - version
 servers:
 - url: http://localhost:3000
