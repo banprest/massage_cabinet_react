@@ -16,6 +16,9 @@ gem "kamal", require: false
 gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
+gem "rswag-api"   # отдаёт openapi.yaml по HTTP
+gem "rswag-ui"    # Swagger UI в браузере
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
@@ -27,6 +30,8 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "rubocop-rspec", require: false
+
+  gem "rswag-specs" # DSL для спеков + генерация openapi.yaml
 end
 
 group :test do

@@ -1,0 +1,48 @@
+---
+openapi: 3.0.1
+info:
+  title: Vozrozhdenie API
+  version: v1
+paths:
+  "/api/v1/health":
+    get:
+      summary: Проверка состояния сервиса
+      tags:
+      - System
+      responses:
+        '200':
+          description: сервис работает
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  db:
+                    type: string
+                  version:
+                    type: string
+                required:
+                - status
+                - db
+                - version
+        '503':
+          description: БД недоступна
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  db:
+                    type: string
+                  version:
+                    type: string
+                required:
+                - status
+                - db
+                - version
+servers:
+- url: http://localhost:3000
