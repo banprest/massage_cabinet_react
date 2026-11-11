@@ -5,5 +5,5 @@ export default function App() {
     <main>
       <h1>«Возрождение»</h1>
     </main>
-  )
+  );
 }
