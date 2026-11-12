@@ -83,6 +83,8 @@
 ---
 
 ## #5 📚 React: основы (обучающая задача)
+> ✅ **Выполнено 2026-11-05.** Упражнение (шаги 1–4 и эксперимент с мутацией state) сделано в локальной песочнице `~/react-sandbox` и прошло ревью в чате. На GitHub не публиковалось: это осознанное решение. Письменные ответы на 5 вопросов перенесены в критерии приёмки #6.
+
 **Цель:** прежде чем строить фронт проекта, понять ментальную модель React: компоненты, props, state, рендер.
 
 **Теория** — конспект на русском: [`docs/learning/react-basics.md`](../learning/react-basics.md).
@@ -154,7 +156,14 @@ npm create vite@latest react-sandbox -- --template react-ts
 - Vite dev-proxy: запросы на `/api` → `http://localhost:3000` (почему proxy, а не CORS — объясни в PR)
 - Абсолютные импорты `@/…`
 
-**Критерии приёмки:** `npm run lint && npm run typecheck && npm test && npm run build` — зелёные.
+**Критерии приёмки**
+- `npm run lint && npm run typecheck && npm test && npm run build` — зелёные.
+- *Перенесено из #5:* в описании PR своими словами (2–5 предложений на вопрос) ответь на вопросы:
+  1. Чем props отличаются от state?
+  2. Почему нельзя мутировать state напрямую? (опирайся на эксперимент с «неправильной» кнопкой цен)
+  3. Что вызывает повторный рендер компонента? Чем рендер отличается от обновления DOM?
+  4. Почему отфильтрованный список не нужно хранить в state?
+  5. Почему выбранную услугу лучше хранить как `id`, а не как объект?
 **Чему научишься:** тулчейн фронтенда — что делают Vite, ESLint, TSC и чем они отличаются друг от друга.
 **Ссылки:** [Vite](https://vite.dev/guide/) · [Vitest](https://vitest.dev/guide/) · [Tailwind + Vite](https://tailwindcss.com/docs/installation/using-vite) · [React Router](https://reactrouter.com/start/declarative/installation) · [Vite server.proxy](https://vite.dev/config/server-options#server-proxy)
 **Оценка:** 4 ч
