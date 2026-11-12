@@ -5,7 +5,12 @@ export function NotFoundPage() {
       <h1 className="text-4xl font-semibold text-emerald-700 md:text-5xl">
         Страница не найдена
       </h1>
-      <Link to="/">На главную</Link>
+      <Link
+        to="/"
+        className="font-semibold text-stone-600 hover:text-emerald-900"
+      >
+        На главную
+      </Link>
     </section>
   );
 }
