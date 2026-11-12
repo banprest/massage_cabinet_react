@@ -124,7 +124,7 @@
 - UI: Tailwind CSS + shadcn/ui
 - Типы API: `openapi-typescript` из спецификации rswag
 - Тесты: Vitest + Testing Library; E2E позже — Playwright
-- Качество: ESLint, Prettier, `tsc --noEmit`
+- Качество: Oxlint (по умолчанию в шаблоне Vite 8), Prettier, `tsc -b`
 
 ### Интеграции
 - Telegram Bot API — уведомления мастеру и клиенту (бесплатно)
