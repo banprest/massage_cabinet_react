@@ -28,19 +28,23 @@ Ruby 4.0+, Rails 8 в режиме API, PostgreSQL / React + TypeScript, React R
 
 ### Бэкенд
 
+```bash
 cd ~/massage_cabinet_react
 docker compose up -d # PostgreSQL
 cd backend
 bundle install
 bin/rails db:prepare
 bin/rails server
+```
 
 ### Фронтенд
 
+```bash
 cd ~/massage_cabinet_react/frontend
 nvm use
 npm install
 npm run dev
+```
 
 запросы /api проксируются в Rails на :3000, поэтому бэкенд должен быть запущен
 

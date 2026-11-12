@@ -7,7 +7,7 @@ export function NotFoundPage() {
       </h1>
       <Link
         to="/"
-        className="font-semibold text-stone-600 hover:text-emerald-900"
+        className="font-semibold text-stone-600 underline hover:text-emerald-900"
       >
         На главную
       </Link>
