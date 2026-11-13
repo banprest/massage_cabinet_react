@@ -1,15 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router";
+import { screen } from "@testing-library/react";
+import { renderAt } from "@/test/renderAt";
 import { describe, expect, it } from "vitest";
-import App from "./App";
-
-function renderAt(path: string) {
-  render(
-    <MemoryRouter initialEntries={[path]}>
-      <App />
-    </MemoryRouter>,
-  );
-}
 
 describe("App", () => {
   it("shows the studio name on the home page", () => {
